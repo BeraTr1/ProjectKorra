@@ -8,27 +8,6 @@
   </parent>
 
   <artifactId>core-legacy</artifactId>
-  <repositories>
-    <!-- local jar files, add more using: mvn install:install-file -Dfile=aaa.jar -DgroupId=aaa -DartifactId=aaa -Dversion=aaa -Dpackaging=jar -DlocalRepositoryPath=path/to/ProjectKorra/localrepo/ -->
-    <repository>
-      <id>project.local</id>
-      <name>project</name>
-      <url>file://${project.basedir}/localrepo/</url>
-    </repository>
-    <!-- WorldGuard and WorldEdit Repo -->
-    <!-- Spigot Repo -->
-    <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-    </repository>
-    <!-- Paper Repo -->
-    <repository>
-      <id>papermc</id>
-      <url>https://papermc.io/repo/repository/maven-public/</url>
-    </repository>
-    <!-- Placeholder API Repo -->
-  </repositories>
-
   <dependencies>
     <!-- PaperLib -->
     <dependency>
@@ -85,8 +64,34 @@
       </plugin>
     </plugins>
   </build>
+
   <properties>
     <dir>${project.build.directory}</dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <repositories>
+    <!-- local jar files, add more using: mvn install:install-file -Dfile=aaa.jar -DgroupId=aaa -DartifactId=aaa -Dversion=aaa -Dpackaging=jar -DlocalRepositoryPath=path/to/ProjectKorra/localrepo/ -->
+    <repository>
+      <id>project.local</id>
+      <name>project</name>
+      <url>file://${project.basedir}/localrepo/</url>
+    </repository>
+    <!-- WorldGuard and WorldEdit Repo -->
+    <!-- Spigot Repo -->
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+    <!-- Paper Repo -->
+    <repository>
+      <id>papermc</id>
+      <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
+    <!-- Placeholder API Repo -->
+    <!-- Aikars Repo -->
+    <repository>
+      <id>aikar</id>
+      <url>https://repo.aikar.co/nexus/content/groups/aikar/</url>
+    </repository>
+  </repositories>
 </project>
